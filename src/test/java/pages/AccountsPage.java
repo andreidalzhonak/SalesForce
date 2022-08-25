@@ -6,7 +6,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import tests.BaseTest;
 
 public class AccountsPage extends BasePage {
 
@@ -16,6 +15,7 @@ public class AccountsPage extends BasePage {
 
     @FindBy(xpath = "//div[contains(@class, 'slds-grid slds-size_1-of-1 label-stacked')]//span[text()='Account Name']//ancestor::div[contains(@class, 'slds-form-element_stacked')]//div[2]//lightning-formatted-text")
     private WebElement nameAccount;
+
     public AccountsPage(WebDriver driver) {
         super(driver);
     }
@@ -25,14 +25,15 @@ public class AccountsPage extends BasePage {
         return this;
     }
 
-    public  NewAccountModalPage openNewAccountModal() {
+    public NewAccountModalPage openNewAccountModal() {
         LOGGER.info("Click New button");
         newButton.click();
-        return new NewAccountModalPage (driver);
+        return new NewAccountModalPage(driver);
     }
-public String takeName() {
+
+    public String takeName() {
         LOGGER.debug(String.format("Check account name %s", nameAccount.getText()));
         String accountName = nameAccount.getText();
-    return accountName;
-}
+        return accountName;
+    }
 }

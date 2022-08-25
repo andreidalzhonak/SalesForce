@@ -1,7 +1,6 @@
 package tests;
 
 import io.qameta.allure.Description;
-import io.qameta.allure.Step;
 import models.NewAccountModel;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -13,7 +12,7 @@ import testdata.PrepareNewAccountData;
 
 public class CreateAccountTest extends BaseTest {
 
-private static final Logger LOGGER = LogManager.getLogger(CreateAccountTest.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(CreateAccountTest.class.getName());
 
     @Test
     @Description("Create new user")

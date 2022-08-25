@@ -1,4 +1,5 @@
 package pages;
+
 import constants.Credentials;
 import constants.Urls;
 import org.apache.log4j.LogManager;
@@ -6,21 +7,19 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import tests.CreateAccountTest;
 
-import java.net.PasswordAuthentication;
 
 public class PageLogin extends BasePage {
     private static final Logger LOGGER = LogManager.getLogger(PageLogin.class.getName());
 
-        @FindBy(id = "username")
-        private WebElement usernameInput;
+    @FindBy(id = "username")
+    private WebElement usernameInput;
 
-        @FindBy(id = "password")
-        private WebElement passwordInput;
+    @FindBy(id = "password")
+    private WebElement passwordInput;
 
-        @FindBy (id = "Login")
-        private WebElement loginButton;
+    @FindBy(id = "Login")
+    private WebElement loginButton;
 
     public PageLogin(WebDriver driver) {
         super(driver);
@@ -35,5 +34,5 @@ public class PageLogin extends BasePage {
         passwordInput.sendKeys(Credentials.PASSWORD);
         LOGGER.info("Click Log In");
         loginButton.click();
-        }
+    }
 }
