@@ -1,7 +1,6 @@
 package tests;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Step;
+import io.qameta.allure.*;
 import models.NewAccountModel;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -11,12 +10,18 @@ import pages.AccountsPage;
 import pages.PageLogin;
 import testdata.PrepareNewAccountData;
 
+@Epic("User Managment")
+@Feature("Registration")
+@Story("Create account")
 public class CreateAccountTest extends BaseTest {
 
 private static final Logger LOGGER = LogManager.getLogger(CreateAccountTest.class.getName());
 
-    @Test
+    @Test(priority = 1)
     @Description("Create new user")
+    @Issue("Qa-100")
+    @TmsLink("SalesForce-1")
+    @Severity(SeverityLevel.BLOCKER)
     public void createAccountPageTest() {
         PageLogin pageLogin = new PageLogin(driver);
         LOGGER.info(String.format("Page %s initialized", PageLogin.class.getName()));

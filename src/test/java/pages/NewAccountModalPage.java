@@ -3,6 +3,7 @@ package pages;
 import elements.DropDownList;
 import elements.TextAreaInput;
 import elements.TextInput;
+import io.qameta.allure.Step;
 import models.NewAccountModel;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -23,6 +24,7 @@ public class NewAccountModalPage extends BasePage {
         super(driver);
     }
 
+    @Step("Input Data in New Model Page")
     public void fillInAccountForm(NewAccountModel newAccount) {
         LOGGER.debug(String.format("Input accountName %s", newAccount.getAccountName()));
         accountNameInput.sendKeys(newAccount.getAccountName());
