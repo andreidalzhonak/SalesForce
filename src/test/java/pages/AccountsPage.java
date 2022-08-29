@@ -7,7 +7,6 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import tests.BaseTest;
 
 public class AccountsPage extends BasePage {
 
@@ -28,12 +27,14 @@ public class AccountsPage extends BasePage {
         return this;
     }
 
+
     @Step("Create New Modal Page")
     public NewAccountModalPage openNewAccountModal() {
         LOGGER.info("Click New button");
         newButton.click();
         return new NewAccountModalPage(driver);
     }
+
 
     @Step("Check account Name")
     public String takeName() {
