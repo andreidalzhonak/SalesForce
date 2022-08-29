@@ -1,6 +1,7 @@
 
 package utils;
 
+
 import io.qameta.allure.Attachment;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,8 +20,4 @@ public class AllureService {
         return System.getProperty("os.name");
     }
 
-    @Attachment
-    public String getTypeBrowser() {
-        return System.getProperty("DriverType");
-    }
 }

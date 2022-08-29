@@ -15,7 +15,7 @@ import testdata.PrepareNewAccountData;
 @Story("Create account")
 public class CreateAccountTest extends BaseTest {
 
-private static final Logger LOGGER = LogManager.getLogger(CreateAccountTest.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(CreateAccountTest.class.getName());
 
     @Test(priority = 1)
     @Description("Create new user")
@@ -39,7 +39,7 @@ private static final Logger LOGGER = LogManager.getLogger(CreateAccountTest.clas
         LOGGER.info("Input test data");
         accountsPage.openNewAccountModal().fillInAccountForm(accountModel);
         LOGGER.info("Check what account matches with account name");
-        Assert.assertEquals(accountModel.getAccountName(), accountsPage.takeName());
+        Assert.assertEquals(accountModel.getAnnualRevenue(), accountsPage.takeName());
 
     }
 }
