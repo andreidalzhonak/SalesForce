@@ -9,14 +9,14 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <aspectj.version>1.9.7</aspectj.version>
-        <testng.version>7.6.1</testng.version>
+        <testng.version>7.1.0</testng.version>
         <selenium.version>3.141.59</selenium.version>
         <javafaker.version>1.0.2</javafaker.version>
         <lombok.verison>1.18.24</lombok.verison>
-        <allure-testng.version>2.14.0</allure-testng.version>
+        <allure-testng.version>2.17.3</allure-testng.version>
         <log4j.version>1.2.17</log4j.version>
         <suiteXmlFile>src/test/resources/testsuites/ParallelRunSuite.xml</suiteXmlFile>
 
@@ -29,6 +29,8 @@
             <version>${testng.version}</version>
             <scope>test</scope>
         </dependency>
+
+
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
@@ -62,6 +64,11 @@
             <version>${log4j.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>3.8.1</version>
+        </dependency>
 
     </dependencies>
 
